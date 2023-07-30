@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>bigdata.lcriadof</groupId>
+  <artifactId>bigData_usando_Kotlin</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <kotlin.version>1.8.22</kotlin.version>
+    <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+    <kotlin-spark-api.version>1.2.0</kotlin-spark-api.version>
+    <spark.version>3.3.0</spark.version>
+   </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>${kotlin.version}</version>
+    </dependency>
+
+    <!-- spark -->
+      <!-- https://mvnrepository.com/artifact/org.jetbrains.kotlinx.spark/kotlin-spark-api_3.0.2 -->
+    <dependency>
+      <groupId>org.jetbrains.kotlinx.spark</groupId>
+      <artifactId>kotlin-spark-api_3.0.2_2.12</artifactId>
+      <version>${kotlin-spark-api.version}</version>
+      <type>pom</type>
+    </dependency>
+
+
+
+
+
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-sql_2.13</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+
+
+    <!-- mongoDB atlas -->
+    <dependency>
+       <groupId>org.mongodb</groupId>
+       <artifactId>mongodb-driver-kotlin-coroutine</artifactId>
+       <version>4.10.1</version>
+    </dependency>
+
+
+    <!-- MySQL usando Exposed -->
+    <!-- Exposed core library -->
+    <dependency>
+      <groupId>org.jetbrains.exposed</groupId>
+      <artifactId>exposed-core</artifactId>
+      <version>0.40.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.exposed</groupId>
+      <artifactId>exposed-dao</artifactId>
+      <version>0.40.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.exposed</groupId>
+      <artifactId>exposed-jdbc</artifactId>
+      <version>0.40.1</version>
+    </dependency>
+
+    <!-- MySQL Connector/J    docker pull mysql:8.0.26  -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.26</version>
+    </dependency>
+    <!-- fin de las dependencia MySQL usando Exposed -->
+
+
+
+
+  </dependencies>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>io.repaint.maven</groupId>
+        <artifactId>tiles-maven-plugin</artifactId>
+        <version>2.11</version>
+        <extensions>true</extensions>
+        <configuration>
+          <tiles>
+            <tile>org.avaje.tile:kotlin:1.1</tile>
+          </tiles>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>
