@@ -18,7 +18,8 @@ fun main(args: Array<String>) {
 
         // insert new city. SQL: INSERT INTO Cities (name) VALUES ('St. Petersburg')
         val stPeteId = Cities.insert {
-            it[name] = "St. Petersburg"
+            //it[name] = "St. Petersburg"
+            it[name] = "Madrid"
         } get Cities.id
 
         // 'select *' SQL: SELECT Cities.id, Cities.name FROM Cities
