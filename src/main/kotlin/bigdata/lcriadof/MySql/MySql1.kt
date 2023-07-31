@@ -10,6 +10,8 @@ fun main(args: Array<String>) {
     Database.connect("jdbc:mysql://localhost:33060/test", driver = "com.mysql.cj.jdbc.Driver",
         user = "root", password = "secret")
 
+    // insertamos datos
+    /*
     transaction {
         // print sql to std-out
         addLogger(StdOutSqlLogger)
@@ -19,12 +21,28 @@ fun main(args: Array<String>) {
         // insert new city. SQL: INSERT INTO Cities (name) VALUES ('St. Petersburg')
         val stPeteId = Cities.insert {
             //it[name] = "St. Petersburg"
-            it[name] = "Madrid"
+            //it[name] = "Madrid"
+            it[name] = "Málaga"
         } get Cities.id
 
-        // 'select *' SQL: SELECT Cities.id, Cities.name FROM Cities
-        println("Cities: ${Cities.selectAll()}")
     }
+
+     */
+
+
+    // leemos datos
+    transaction {
+        // 'select *' SQL: SELECT Cities.id, Cities.name FROM Cities
+        val citiesList = Cities.selectAll().toList()
+
+        // Imprimir el contenido de la lista de ciudades
+        println("Cities:")
+        citiesList.forEach { city ->
+            println("ID: ${city[Cities.id]}, Name: ${city[Cities.name]}")
+        }
+    }
+
+
 }
 
 object Cities: IntIdTable() {
