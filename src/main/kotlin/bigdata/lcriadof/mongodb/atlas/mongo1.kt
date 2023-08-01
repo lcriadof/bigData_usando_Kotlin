@@ -12,7 +12,7 @@ import kotlinx.coroutines.runBlocking
 
     fun main() {
         // Replace the placeholders with your credentials and hostname
-        val connectionString = "mongodb+srv://luiscriadofernandez:fnYCwT6OryjkCPnO@cluster0.szjjj5q.mongodb.net/?retryWrites=true&w=majority"
+        val connectionString = "mongodb+srv://maquina:fnYCwT6OryjkCPnO@cluster0.szjjj5q.mongodb.net/?retryWrites=true&w=majority"
 
         val serverApi = ServerApi.builder()
             .version(ServerApiVersion.V1)
