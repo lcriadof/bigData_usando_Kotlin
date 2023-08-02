@@ -1,6 +1,6 @@
 package bigdata.lcriadof.mongodb.local
 
-// nos conectamos a mongoDB
+
 
 import com.mongodb.ConnectionString
 import com.mongodb.client.MongoClients
@@ -15,13 +15,26 @@ fun connectToMongoDB(): MongoClient {
 
 
 fun main(){
+
+    // conectamos a mongoDB
     val mongoClient = connectToMongoDB()
-    val database = mongoClient.getDatabase("mydb") // Cambiar por el nombre de tu base de datos
-    val collection: MongoCollection<Document> = database.getCollection("mycollection") // Cambiar por el nombre de tu colección
 
-    val document = Document("name", "John Doe")
-        .append("age", 30)
-        .append("email", "john.doe@example.com")
+    // creamos BBDD, colección
+    val database = mongoClient.getDatabase("tfmLCF")
+    val collection: MongoCollection<Document> = database.getCollection("provincias")
 
+
+      // creamos documento
+    /*
+    val document = Document("nombre", "Madrid")
+        .append("poblacion", 6666747)
+        .append("superficie_km2", 8027)
+     */
+
+    val document = Document("nombre", "Barcelona")
+        .append("poblacion", 5664579)
+        .append("superficie_km2", 7720)
+
+    // insertamos documento en coleección
     collection.insertOne(document)
 }
