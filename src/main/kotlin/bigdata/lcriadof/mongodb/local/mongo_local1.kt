@@ -29,11 +29,18 @@ fun main(){
     val document = Document("nombre", "Madrid")
         .append("poblacion", 6666747)
         .append("superficie_km2", 8027)
-     */
 
     val document = Document("nombre", "Barcelona")
         .append("poblacion", 5664579)
         .append("superficie_km2", 7720)
+     */
+
+
+
+
+    val document = Document("nombre", "Sevilla")
+        .append("poblacion", 1942389)
+        .append("superficie_km2", 14036)
 
     // insertamos documento en coleección
     collection.insertOne(document)
