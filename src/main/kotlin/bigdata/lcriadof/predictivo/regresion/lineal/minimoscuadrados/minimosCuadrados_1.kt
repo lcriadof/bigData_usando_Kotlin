@@ -1,25 +1,24 @@
 package bigdata.lcriadof.predictivo.regresion.lineal.minimoscuadrados
 
-// Usando KOMA
-//    https://github.com/kyonifer/koma/tree/master
-//     documentación -> http://koma.kyonifer.com/
+//import org.jetbrains.kotlinx.dataframe.io.readCSV
+import org.apache.commons.math3.stat.regression.SimpleRegression
 
-import koma.*
-import koma.extensions.*
-import koma.matrix.Matrix
-import koma.matrix.ejml.EJMLMatrixFactory
+
+
 
 fun main() {
-    // Usar la fábrica de matrices de Ejml
-    setDefaultMatrixFactory(EJMLMatrixFactory())
+    // Leer los datos desde un archivo CSV
+    //val df = DataFrame.readCSV("data.csv")
 
-    // Generar el conjunto de datos con valores de entrada y salida que sigan una relación lineal
-    val xTrain = ones(1000, 1) hstack randn(1000, 1)
-    val yTrain = xTrain * mat[3, 10].T + randn(1000, 1)
-
-    // Resolver el sistema de ecuaciones usando las ecuaciones normales: w = (X^T X)^-1 X^T y
-    val w = (xTrain.T * xTrain).inv() * xTrain.T * yTrain
-
-    // Mostrar los coeficientes estimados
-    println(w)
-}
+       // Crear un objeto de regresión simple
+        val regression = SimpleRegression()
+        // Añadir los datos (x, y)
+        regression.addData(1.0, 2.0)
+        regression.addData(3.0, 3.0)
+        regression.addData(5.0, 5.0)
+        // Obtener los parámetros del modelo
+        val slope = regression.slope
+        val intercept = regression.intercept
+        // Imprimir los resultados
+        println("La ecuación de la línea de regresión es: y = $slope x + $intercept")
+  }

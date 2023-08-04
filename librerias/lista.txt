@@ -1,0 +1,15 @@
+
+    Directory: F:\datos\07 IDEA\bigData_usando_Kotlin\librerias
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          04/08/2023    13:57            261 koma-core-api-jvm-0.12.1-javadoc.jar
+-a---          04/08/2023    13:56        1830182 koma-core-api-jvm-0.12.1.jar
+-a---          04/08/2023    17:53            261 koma-core-ejml-0.12.1-javadoc.jar
+-a---          04/08/2023    17:53          20784 koma-core-ejml-0.12.1.jar
+-a---          04/08/2023    14:07            261 koma-logging-jvm-0.12.1-javadoc.jar
+-a---          04/08/2023    14:04          15990 koma-logging-jvm-0.12.1.jar
+-a---          04/08/2023    14:07            261 koma-plotting-jvm-0.12.1-javadoc.jar
+-a---          04/08/2023    14:05          13035 koma-plotting-jvm-0.12.1.jar
+-a---          04/08/2023    18:16              0 lista.txt
+
