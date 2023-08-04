@@ -12,10 +12,6 @@ object Cities: IntIdTable() {
 
 
 // escribimos datos en MySql
-
-
-
-
 fun main() {
 
     Database.connect("jdbc:mysql://localhost:33060/test", driver = "com.mysql.cj.jdbc.Driver",
