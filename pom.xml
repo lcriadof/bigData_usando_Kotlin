@@ -28,6 +28,10 @@
       <id>kyonifer-bintray</id>
       <url>https://dl.bintray.com/kyonifer/maven</url>
     </repository>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
 
   </repositories>
 
@@ -119,7 +123,16 @@
     </dependency>
 
 
-
+    <dependency>
+      <groupId>org.nield</groupId>
+      <artifactId>kotlin-statistics</artifactId>
+      <version>1.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.thomasnield</groupId>
+      <artifactId>kotlin-statistics</artifactId>
+      <version>1.2.1</version>
+    </dependency>
 
 
 
