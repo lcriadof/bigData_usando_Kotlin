@@ -122,17 +122,36 @@
       <type>pom</type>
     </dependency>
 
+    <!--  dependencia para que funcione SMILE-->
+    <dependency>
+      <groupId>com.github.haifengl</groupId>
+      <artifactId>smile-kotlin</artifactId>
+      <version>3.0.1</version>
+    </dependency>
 
-    <dependency>
-      <groupId>org.nield</groupId>
-      <artifactId>kotlin-statistics</artifactId>
-      <version>1.2.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.thomasnield</groupId>
-      <artifactId>kotlin-statistics</artifactId>
-      <version>1.2.1</version>
-    </dependency>
+      <!-- javacpp -->
+      <dependency>
+        <groupId>org.bytedeco</groupId>
+        <artifactId>javacpp</artifactId>
+        <version>1.5.8</version>
+      </dependency>
+
+      <!-- openblas -->
+      <dependency>
+        <groupId>org.bytedeco</groupId>
+        <artifactId>openblas</artifactId>
+        <version>0.3.21-1.5.8</version>
+      </dependency>
+
+      <!-- arpack-ng -->
+      <dependency>
+        <groupId>org.bytedeco</groupId>
+        <artifactId>arpack-ng</artifactId>
+        <version>3.8.0-1.5.8</version>
+      </dependency>
+    <!--  fin   dependencia para que funcione SMILE-->
+
+
 
 
 
