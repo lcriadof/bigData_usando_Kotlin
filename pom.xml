@@ -10,8 +10,10 @@
     <kotlin.version>1.8.22</kotlin.version>
     <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
     <kotlin-spark-api.version>1.2.0</kotlin-spark-api.version>
+    <scala.version>2.12.13</scala.version>
+    <scala.binary.version>2.12</scala.binary.version>
     <spark.version>3.3.0</spark.version>
-   </properties>
+  </properties>
 
 
   <repositories>
@@ -46,35 +48,29 @@
       <version>${kotlin.version}</version>
     </dependency>
 
-    <!-- spark -->
-      <!-- https://mvnrepository.com/artifact/org.jetbrains.kotlinx.spark/kotlin-spark-api_3.0.2 -->
+     <!-- https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/spark/ -->
+    <!-- https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/spark/core_3.3.0_2.13/ -->
+    <!-- dependencias spark que funcionan tanto en Java como en kotlin-->
+
+    <!-- Scala -->
     <dependency>
-      <groupId>org.jetbrains.kotlinx.spark</groupId>
-      <artifactId>kotlin-spark-api_3.0.2_2.12</artifactId>
-      <version>1.2.0</version>
-      <type>pom</type>
-      <exclusions>
-        <exclusion>
-          <groupId>org.slf4j</groupId>
-          <artifactId>slf4j-log4j12</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
     </dependency>
 
-
-
-
-
-
+    <!-- Apache Spark Core -->
     <dependency>
       <groupId>org.apache.spark</groupId>
-      <artifactId>spark-sql_2.13</artifactId>
+      <artifactId>spark-core_${scala.binary.version}</artifactId>
       <version>${spark.version}</version>
     </dependency>
-
-
-
-
+    <!-- Apache Spark SQL -->
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-sql_${scala.binary.version}</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
 
 
     <!-- mongoDB atlas -->
@@ -189,3 +185,5 @@
   </build>
 
 </project>
+
+

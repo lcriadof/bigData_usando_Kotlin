@@ -13,8 +13,8 @@ fun isSparkClusterAvailable(host: String, port: Int): Boolean {
 }
 
 fun main() {
-    val sparkHost = "192.168.68.61"
-    val sparkPort = 7077
+    val sparkHost = "192.168.68.58"
+    val sparkPort = 4040
 
     if (isSparkClusterAvailable(sparkHost, sparkPort)) {
         // Configuración para el clúster de Spark en Docker
