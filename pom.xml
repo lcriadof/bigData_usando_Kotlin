@@ -13,6 +13,7 @@
     <scala.version>2.12.13</scala.version>
     <scala.binary.version>2.12</scala.binary.version>
     <spark.version>3.3.0</spark.version>
+    <hadoop.version>3.2.1</hadoop.version>
   </properties>
 
 
@@ -51,14 +52,12 @@
      <!-- https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/spark/ -->
     <!-- https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/spark/core_3.3.0_2.13/ -->
     <!-- dependencias spark que funcionan tanto en Java como en kotlin-->
-
     <!-- Scala -->
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
       <version>${scala.version}</version>
     </dependency>
-
     <!-- Apache Spark Core -->
     <dependency>
       <groupId>org.apache.spark</groupId>
@@ -72,6 +71,24 @@
       <version>${spark.version}</version>
     </dependency>
 
+    <!-- ========================================= -->
+    <!-- Hadoop -->
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-common</artifactId>
+      <version>${hadoop.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-hdfs</artifactId>
+      <version>${hadoop.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-mapreduce-client-core</artifactId>
+      <version>${hadoop.version}</version>
+    </dependency>
+    <!-- fin de Hadoop -->
 
     <!-- mongoDB atlas -->
     <dependency>

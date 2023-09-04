@@ -1,0 +1,4 @@
+Descargado de https://github.com/big-data-europe/docker-hadoop
+
+Para ejecutar: docker-compose up
+
