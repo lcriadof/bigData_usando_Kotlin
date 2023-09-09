@@ -3,8 +3,8 @@ package bigdata.lcriadof.mongodb.local
 
 
 import com.mongodb.ConnectionString
-import com.mongodb.client.MongoClients
 import com.mongodb.client.MongoClient
+import com.mongodb.client.MongoClients
 import com.mongodb.client.MongoCollection
 import org.bson.Document
 fun connectToMongoDB(): MongoClient {
@@ -29,19 +29,24 @@ fun main(){
     val document = Document("nombre", "Madrid")
         .append("poblacion", 6666747)
         .append("superficie_km2", 8027)
-
+  */
     val document = Document("nombre", "Barcelona")
         .append("poblacion", 5664579)
         .append("superficie_km2", 7720)
-     */
 
 
 
 
-    val document = Document("nombre", "Sevilla")
-        .append("poblacion", 1942389)
-        .append("superficie_km2", 14036)
+/*
+   val document = Document("nombre", "Sevilla")
+       .append("poblacion", 1942389)
+       .append("superficie_km2", 14036)
 
-    // insertamos documento en coleección
-    collection.insertOne(document)
+ */
+
+   // insertamos documento en coleección
+   collection.insertOne(document)
+
+   // cerramos el cliente de MongoDB y liberamos recursos
+   mongoClient.close()
 }
